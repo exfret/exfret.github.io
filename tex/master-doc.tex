@@ -1,0 +1,1163 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{bbold}
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{csquotes}
+
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{commath}
+\usepackage{empheq}
+\usepackage{setspace}
+\usepackage{algorithm2e}
+\usepackage{ntheorem}
+\usepackage{envmath}
+\usepackage{xcolor}
+\usepackage[toc,page]{appendix}
+\usepackage{geometry}
+%\usepackage{subcaption}
+\usepackage{subfig}
+%\usepackage{subcaption} 
+
+\usepackage{titlesec}
+\usepackage{pdfpages}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\usepackage{setspace}
+%\onehalfspacing
+
+\makeatletter
+\newlength{\boxed@align@width}
+\newcommand{\boxedalign}[2]{
+#1 & \setlength{\boxed@align@width}{\widthof{$\displaystyle#1$}+0.1389em+\fboxsep+\fboxrule}
+\hspace{-\boxed@align@width}\addtolength{\boxed@align@width}{-\fboxsep-\fboxrule}\boxed{\vphantom{#1}\hspace{\boxed@align@width}#2}}
+\makeatother
+ 
+
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\iu}{{\mathrm{i}}}
+\newcommand{\indep}{\raisebox{0.05em}{\rotatebox[origin=c]{90}{$\models$}}}
+ % couleur
+\allowdisplaybreaks
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\RR}{\mathbb{R}}
+\renewcommand{\SS}{\mathbb{S}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\NN}{\mathbb{N}}
+
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\om}{\mathbf{\Omega}}
+
+
+
+\newcommand{\II}{\mathbb{I}}
+\newcommand{\re}{\mathrm{Re}}
+\newcommand{\im}{\mathrm{Im}}
+\newcommand{\supp}{\mathrm{supp}}
+\newcommand{\proj}{\mathrm{proj}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\HF}{\mathrm{HF}}
+
+\newcommand{\JSH}{\color{blue} }
+
+\newcommand{\ind}{\mathds{1}}
+
+\newcommand{\sub}{\operatorname{sub}}
+
+\newcommand{\dd}{\mathrm{d}}
+
+
+\SetEnumerateShortLabel{i}{\textit{\roman}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{defn}[theorem]{Definition}
+
+\newtheorem{proofpart}{Part}
+\makeatletter
+\@addtoreset{proofpart}{theorem}
+\makeatother
+
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\;\hfill $\square$\\\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries Definition (#1):}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{assumption}[1][Assumption]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\title{101+ Actually Good Math Problems}
+\author{Kyle Hess}
+\date{November 2020}
+
+\begin{document}
+
+\maketitle
+
+NOTE: The problem ID's can be transferred into URL's as follows: Append the number to the URL ``www.facebook.com/groups/1923323131245618/permalink/".
+
+\section{Example problem}
+
+Author: Kyle Hess --- ID: \verb`00000000000` --- Date: 12/30/2000
+
+\subsection{Problem statement}
+
+What is $\sqrt{100}$?
+
+\subsection{Clarifications and comments}
+
+For any $n\geq 0$, $\sqrt{n}$ is the unique nonnegative number $m$ such that $m^2=n$.
+
+\subsection{Progress}
+
+It is conjectured to be 10, but currently Russell's Principia Mathematica project has only been able to prove the value of the sum $1+1=2$.
+
+\subsection{Related problems}
+
+We can also consider the value of $\sqrt{n}$ for arbitrary $n$.
+
+\pagebreak
+
+\section{Linear Conway's soldiers}
+
+Author: Sam Rosenstrauch --- ID: \verb`3591130021131579` --- Date: 10/26/2022
+
+\subsection{Problem statement}
+
+Initially, the number 2 is on the board. At any point in time, a number $n$ written on the board may be erased and replaced by numbers $n+1$ and $n^2$ as long as those numbers are both not on the board (so all the numbers on the board must be distinct). Is it true that for any $k>0$ we can replace numbers in a way such that they are all greater than or equal to $k$?
+
+\subsection{Clarifications and comments}
+
+It is possible for a number to appear on the board on multiple occasions so long as it was erased before the next time it appears. A number just can't appear on the board twice at the same time.
+
+A greedy strategy of simply replacing the smallest number that can be replaced doesn't automatically work since doing so may result in a new number being blocked ad infinitum. To see this, consider other slight variants of the problem, like replacing $n$ with $n+1$ and $n+3$.
+
+\subsection{Progress}
+
+The greedy strategy of replacing the smallest replaceable number each time seems to work via computer search, but is extremely slow. After 10000 steps, this results in a lowest number of 10, and after 100000 it results in a lowest number of 13.
+
+By using methods similar to those used to solve the Conway soldier problem, I was able to show that the rule $n\to n+1,n^c$ is not solvable when $c<2$, but could go no further with this (which makes the value of $c=2$ look very suspicious).
+
+\subsection{Related problems}
+
+We can also ask for other rules, or in general replacing $n$ with $f_1(n),\ldots,f_l(n)$ for some functions $f_1,\ldots,f_l$.
+
+\pagebreak
+
+\section{Breaking sticks}
+
+Author: John River --- ID: \verb`3552524714992110` --- Date: 9/13/2022
+
+\subsection{Problem statement}
+
+On the ground lies a pile of sticks of various lengths. A stick is chosen, with each stick having equal chance of being chosen, and this stick is broken at a random point along its length. The two resulting sticks are returned to the pile.
+
+If we apply this process $n$ times to a pile initially containing only a stick of length one, what is the expected size of the largest stick in the pile afterwards?
+
+\includegraphics[scale=0.15]{Media/breaking_sticks_1.jpg}
+
+\subsection{Clarifications and comments}
+
+Since each stick has an equal chance of being chosen regardless of its length, very small sticks have a disproportionately high chance of being broken into more smaller sticks. This results in abnormally large average lengths for the largest piece.
+
+For example, after 500 ``snaps", the expected length of the largest stick is about 0.2098, which is 100x larger than the average stick length of 0.002.
+
+\subsection{Progress}
+
+In the following link, it is shown that the length is on the order of $n^{2\sqrt2-3}$.
+
+\begin{verbatim}
+  https://mathoverflow.net/questions/430355/expected-length-of-longest-stick
+  -in-a-stick-snapping-process?fbclid=IwAR28qH5gZQK-Ms3mskm4y
+  _FmBxPWrtTPdF0IMY-Iw0IZsxU-EMc0psOutSU
+\end{verbatim}
+
+Some exact answers are $3/4$ for $n=1$, $3/8+\log(4/3)$ for $n=2$, and for $n=3$ it is known to be...
+
+$$\frac{5}{24}+\frac{89}{18}\log(2)-\frac{17}{6}\log(3)+\frac{1}{3}\sum_{n=1}^\infty\frac{1}{4^nn^2}$$
+
+The sum in this answer can't even be written in a closed form without using special functions. The exact answer for the $n=4$ case is open, or, rather, probably deserves to be left alone.
+
+\subsection{Related problems}
+
+There is also the problem where sticks are chosen with higher likelihood in proportion to their length, which reduces to the problem of breaking a line segment along $n$ random points and then considering the largest piece.
+
+We can also weight the chance of choosing a piece of a given length $L$ by some formula in $L$, like $L^c$ for some $c$. The two problems mentioned correspond to $c=0$ and $c=1$.
+
+\pagebreak
+
+\section{Can't Stop Simplified}
+
+Author: Richard Strong Bowen --- ID: \verb`3540962639481651` --- Date: 8/29/2022
+
+\subsection{Problem Statement}
+
+In the game of Can't Stop Simplified, each of two players has a stack of coins of some size $n$. On their turn, a player may flip a coin. If it is heads, they remove a coin from their stack. If it is tails their turn ends and all coins that were removed that turn go back onto their stack. A player can also choose to stop flipping a coin at any given time, at which point all coins removed that turn will be permanently removed from that player's stack and their turn ends.
+
+What is the optimal strategy for this game?
+
+\subsection{Clarifications and comments}
+
+None.
+
+\subsection{Progress}
+
+A dynamic programming algorithm for solving the problem was created by Alex Meiburg (unfortunately, I don't have access to the source code). This algorithm was also double-checked with some manual caluclations by myself.
+
+It was conjectured by Martin Shoosterman that the optimal play would be to take about $-1/\log p$ coins and stop (where $p$ is the probability of getting heads), but this turned out not to be the case.
+
+\subsection{Related problems}
+
+We can also consider $p$ other than 1/2 or a number of players other than just 2. As this game was inspired by a very popular title on Board Game Arena (a website that hosts online board games), we can also consider making the game more similar to this game and then solving it.
+
+\pagebreak
+
+\section{Number of cubes distinguishable from the outside}
+
+Author: Kirill Michael Poznyak --- ID: \verb`3509248082653107` --- Date: 7/18/2022
+
+\subsection{Problem statement}
+
+Consider an $n\times n\times n$ cube divided into $n^3$ unit cubes. Each unit cube cell is either transparent or opaque. Call two configurations equivalent if it is not possible to see the difference between the two by viewing them from any angle outside the cube. How many equivalence classes of configurations are there?
+
+\subsection{Clarifications and comments}
+
+The answer is not $2^{n^3}$ since if all the cells on the outside are opaque, we can't tell whether the remaining cells on the inside are opaque or transparent.
+
+We have to decide whether we can ``see through cracks"; essentially, whether the unit cubes are open or closed. For example, in the following figure for the two dimensional $n=3$ case, it is ambiguous whether we would allow seeing whether the central square (marked by a question mark) is opaque or transparent.
+
+\BlankLine
+\BlankLine
+
+\includegraphics[scale=0.1]{Media/number_of_cubes_distinguishable_1.jpeg}
+
+Make your own choice, although I would personally allow the cracks to not be seen through. So, in the above example, we would not be able to tell the state of the center square.
+
+\subsection{Progress}
+
+Andrew Kepert worked out by hand the following answers for the two dimensions version and $n=1,2,3,4$, $2,16,496,57136$. These have not been verified, so take them with a grain of salt.
+
+One approach suggested by myself is to consider the sets of cubes that can be produced by a ``line of sight" and considering the possible interactions between these sets of cubes.
+
+\subsection{Related problems}
+
+We can consider the 2D version, actually as a preliminary problem. We can also consider only taking lines of sight perpendicular to the faces of the cube for a slightly different counting problem, or considering the problem where we ``don't have depth perception" and can only tell when a line of sight is interrupted rather than where it is interrupted (whether this is equivalent to the original problem is actually unknown to my knowledge).
+
+\pagebreak
+
+
+
+\pagebreak
+
+\section{Accurate IMDB ratings}
+
+Author: Arsh Jhaj --- ID: \verb`3504185873159328` --- Date: 7/11/2022
+
+\subsection{Problem statement}
+
+This problem is motivated by the following ``real-life" example. Suppose that when a person sees an IMDB rating for a movie higher than their own personal rating for it, they rate it $0/10$ in order to bring it closer to their rating. Conversely, when a person sees a lower rating than their personal opinion, they rate the movie 10/10. How accurate will be the resulting IMDB rating to the actual average rating?
+
+Formally speaking, say that we have a distribution on $[0,1]$ with mean $\mu$. Suppose $(X_i)$ is a sequence of i.i.d. random variables with distribution $D$ (representing the distribution of ratings for the movie). Define $f_r:\mathbb{R}\to\mathbb{R}$ such that $f(x)$ is equal to zero for negative $x$, equal to $r$ at $x=0$, and equal to one for positive $x$. Then let $Y_i=f_{X_i}(X_i-\frac{1}{i-1}\sum_{j=1}^{i-1}Y_j)$. Does the sample mean of the $Y_i$'s always tend to $\mu$ almost surely? If not, how far does it stray from $\mu$?
+
+\subsection{Clarifications and comments}
+
+This is actually different from the originally posted problem in two important ways. First of all, the original problem had probability distributions with some finite support $\{1,\ldots,K\}$ for some $K$. I modified this to support in $[0,1]$. Also, the $Y_i$'s were defined with respect to the average of the $X_i$'s rather than the previous $Y_i$'s, which seems to me to contradict the purpose of the problem.
+
+\subsection{Progress}
+
+The original problem is known to be false (that is, the sample mean doesn't always tend to $\mu$), but I'm not sure about my formulation.
+
+\subsection{Related problems}
+
+We can also try to consider non-distribution-based versions of this problem. I don't have a precise formulation of anything in these directions, but I'm sure there are interesting ones to discover.
+
+\pagebreak
+
+\section{Fixed chances, unknown numbers of balls}
+
+Author: Elliott Line --- ID: \verb`3454653844779198` --- Date: 5/8/2022
+
+\subsection{Problem statement}
+
+There are $n$ balls in a bag, each of which has one of $k$ colors. You draw three of the balls and find that they all have the same color. What is the minimum value of $n$ so that the chance of this occurrence is one third?
+
+\subsection{Comments and clarifications}
+
+We do not care about minimizing or fixing $k$, though we could consider that as a future direction. Also, the three balls are picked without replacement, so they are not put back in before choosing the next one.
+
+\subsection{Progress}
+
+It is known via computer search that the minimum answer is 82, via the partitioning into colors given by $(57,12,6,6,1)$. A more mathematical proof is not known.
+
+\subsection{Related problems}
+
+We can also limit the number of colors $k$, or ask for probabilities $p$ other than $1/3$. It is known that for $k=3,p=1/3$, the minimum $n$ is 34102 given by the arrangement $(23460, 5797, 4845)$, despite there existing double-digit solutions for $p\in\{1/2,1/4,1/5,1/6,1/7\}$. In general, relatively easy solutions were found for all fractions in $[0,1]$ with denominator less than 10, except for the numbers $1/3,4/9,5/9,7/9$.
+
+\pagebreak
+
+\section{Escaping a tsunami}
+
+Author: Antoine Toni Poulin --- ID: \verb`3429336220644294` --- Date: 4/4/2022
+
+\subsection{Problem statement}
+
+Consider a bisequence of ones and zeroes. These encode a landscape as follows: a point's height is the minimum distance to the nearest zero. See the below image as a demonstration.
+
+\includegraphics[scale=0.1]{Media/escaping_a_tsunami_1.jpg}
+
+Now, imagine a tsunami is rising and covering up the whole landscape, one height level at a time. Initially, it only covers up the lowest height areas (those that were originally a zero in the original bisequence that defined the landscape). After one hour, it covers up all points of height one, then after an hour all points of height two, and so on. We have a helicopter, luckily, and will jump each hour from any point to the nearest point that is of height one larger (choose the rightmost point if there is a tie in distance).
+
+Is it true that if our friend at the same height as us carries out the same process with her helicopter, she will eventually converge to us?
+
+\includegraphics[scale=0.1]{Media/escaping_a_tsunami_2.jpg}
+
+In this picture above, You start at A1 and your friend at B1 and eventually you both converge on B4/A4 (assume there are sufficiently many zeroes to the left an right for these paths to be correct). The question is: does this happen \textit{almost always}, that is, is it true that with measure one a given bisequence has this ``convergent" property?
+
+\subsection{Clarifications and comments}
+
+A bisequence is a function from $\mathbb{Z}$ to some set $S$ (recall that a ``normal" sequence goes from $\mathbb{N}$ to $S$). In other words, a bisequence is a ``two-sided sequence" which trails off infinitely to the left and to the right.
+
+\subsection{Progress}
+
+A proof is known by Antoine that involves some stochastic something trickery. It is easy to show in an elementary manner that there are at most two ``convergent paths", but showing that there is indeed one takes some work that I haven't put in yet.
+
+Here is a sketch of Antoine's proof:
+
+\begin{quote}
+  If a given landscape makes it impossible for two friends to find each other, varying the position of the two friends give that the landscape has a natural "midpoint" m, where if one friends start to the right or at m and the other on the left of m, they cannot rejoin. 
+
+  Now this midpoint is invariant under translation of the sequence, hence we can choose for the midpoint to be at 0.
+
+  Suppose to the contrary that there is a non null probability that the two friends cannot see each other. Then, there is a non null set on which a set of representatives up to translation can be taken.
+
+  This set of representative can be constructed with more care in a measurable way, but trying to calculate its measure fails in the same way as the usual vitali set contruction, by a countable union of disjoint translates giving a non null, non infinite measure set.
+\end{quote}
+
+\subsection{Related problems}
+
+This was inspired by some research into finding measureable trees in Borel graphs arising from a countable group $\Gamma$ acting on its power set.
+
+We can also consider generalizing the problem in a less abstract way by allowing arbitrary landscapes with piecewise linear functions, or simply allowing arbitrary landscapes with slopes of -1, 0, or 1 at each step.
+
+\pagebreak
+
+\section{Number of vector orderings in a plane}
+
+Author: Ben Millwood --- ID: \verb`3399730876938162` --- Date: 2/23/2022
+
+\subsection{Problem statement}
+
+Let $X\subset\mathbb{R}^n$ be the set of all vectors in $\mathbb{R}^n$ with distinct entries. Consider the function $f:X\to Sym_n$ defined by letting $f(v)$ be the unique permutation $\sigma$ in the symmetric group on $n$ letters such that $v_{\sigma(1)}<v_{\sigma(2)}<\cdots< v_{\sigma(n)}$. What is the maximum number of values that the intersection of a two dimensional subspace of $\mathbb{R}^n$ with $X$ can take under the function $f$?
+
+\subsection{Clarifications and comments}
+
+The function $f$ simply describes the ordering of the entries of a vector $v$. Vectors with the same orderings of their entries are assigned the same permutation, whereas those with different orderings of their entries are assigned different entries. For example, $(1,4,2)$ and $(-1,3,2.5)$ have the same orderings, but $(1,4,2)$ and $(6,4,2)$ do not, since the first entry is less than the second in the former vector and less than the second entry in the latter vector.
+
+So, since a two dimensional subspace is just a space generated by two linearly independent vectors, this is essentially asking for the number of different orderings of the entries of a vector one can get from the linear combinations of two fixed vectors $u,v$.
+
+\subsection{Progress}
+
+The answer is $n(n-1)$.
+
+Credit to Andrew Kepert for the following.
+
+For a better upper bound, we can rotate around a circle in the two-dimensional subspace and count the number of times two entries ``switch their position in the ordering". That is, points $p$ where $v_i>v_j$ immediately beforehand, and where $v_i<v_j$ immediately after (for some $i\neq j$). It's easy to see that such points occur whenever $(e_i-e_j)\bullet v>0$ immediately before $p$ as we rotate around the circle, and $(e_i-e_j)\bullet v<0$ immediately after, which by the intermediate value theorem implies that $(e_i-e_j)\bullet p=0$. Since $g(v)=(e_i-e_j)\bullet v$ is a linear function, it either intersects the circle at no points, two points, or all points. If it intersects at all points, then the values of $v_i$ and $v_j$ never switch as we go around the circle. Thus, the maximum number of such points for each pair of $i,j$ is two, which gives an upper bound of $n(n-1)$.
+
+Credit to me for the following. (Andrew Kepert also produced a lower bound proof, but I think this is more sleek).
+
+Now for a lower bound. Consider a two-dimensional subspace $V$ generated by $u,v$ that have unique entries. For any such $u$ (or $v$ for that matter), the value of $(e_i-e_j)\bullet u\neq 0$ for any $i,j$, so the subspace $W_{i,j}$ of all points $p$ such that $(e_i-e_j)\bullet p=0$ does not contain $V$. So the intersection of $V$ and $W_{i,j}$ is not dimension two. It is also not dimension zero since $dim(V)=2,dim(W_{i,j})=n-1$.
+
+All that remains to be shown is that the intersection of any $W_{i,j}$ with $W_{i',j'}$ is never contained in $V$, since then each $W_{i,j}$ will separate $V$ into two new regions, thus achieving the bound. But for any such $i,j$, the set of such two-dimensional subspaces (with the measure induced by randomly choosing two vectors in the unit hypersphere to generate said subspace) is zero, and the set of subspaces that can't be generated by $u,v$ with distinct entries is also zero, so there must must be a two-dimensional subspace that meat our criteria (in fact, almost all subspaces do).
+
+\subsection{Related problems}
+
+We can also consider $k$-dimensional subspaces for arbitrary $k$. The proofs above break down in some places, but are probably still recoverable.
+
+\pagebreak
+
+\section{Guaranteeing forward images of periodic sequences are periodic}
+
+Author: G Tony Jacobs --- ID: \verb`3333678430210074` --- Date: 11/24/2021
+
+\subsection{Problem statement}
+
+Let $S$ be the set of infinite sequences over $\{0,1\}$. Let $f:S\to S$ satisfy the following conditions:
+
+\begin{enumerate}
+  \item $f$ is a bijection.
+  \item If $x\in S$ is eventually periodic, so is $f^{-1}(x)$.
+  \item The $x$ and $y$ agree on their first $k$ entries and disagree on their $k+1$-th if and only if $f(x)$ and $f(y)$ agree on their first $k$ entries and disagree on their $k+1$-th.
+\end{enumerate}
+
+\subsection{Comments and clarifications}
+
+The third condition can be equivalently stated that
+
+\BlankLine
+
+$\Big[$ $(x_1,x_2,\ldots,x_k)=(y_1,y_2,\ldots,y_k)$ \textit{and} $x_{k+1}\neq y_{k+1}$ $\Big]$
+
+\BlankLine
+
+if and only if
+
+\BlankLine
+
+$\Big[$ $(f(x)_1,f(x)_2,\ldots,f_(x)_k)=(f(y)_1,f(y)_2,\ldots,f(y)_k)$ \textit{and} $f(x)_{k+1}\neq f(y)_{k+1}$ $\Big]$.
+
+\subsection{Progress}
+
+Several counterexamples have been given in the comments, but I haven't verified them yet.
+
+\subsection{Related problems}
+
+None.
+
+\pagebreak
+
+\section{Transitivity of countable dense subsets under homeomorphisms}
+
+Author: Arsh Jhaj --- ID: \verb`3256745907903327` --- Date: 8/16/2021
+
+\subsection{Problem statement}
+
+Let $X$ be a connected separable topological space. Is it true that for any infinite countable dense subsets $A,B\subset X$, there is a homeomorphism $f:X\to X$ that takes $A$ to $B$? In general, what conditions can we put on $X$ for this to be true?
+
+\subsection{Comments and clarifications}
+
+This problem is inspired by the case where $X=\mathbb{R}^n$, where the statement is true.
+
+\subsection{Progress}
+
+Of course, almost any topological space with non-transitive self-homeomorphism group won't work. As one example, we can take the subset $\{(x,y)\vert x=0\textrm{ or }y=0\}$ of $\mathbb{R}^2$.
+
+\subsection{Related problems}
+
+None.
+
+\pagebreak
+
+\section{Fractions that converge to two numbers at once}
+
+Author: Arsh Jhaj --- ID: \verb`3250405831870668` --- Date: 8/8/2021
+
+\subsection{Problem statement}
+
+Let $0\leq b\leq a\leq\infty$. Do there exist \textit{enumerations} of the positive rationals $\{q_n\},\{r_n\}$ so that $\limsup(q_n/r_n)=a$ and $\liminf(q_n/r_n)=b$.
+
+\subsection{Comments and clarifications}
+
+The sequences $q_n,r_n$ must be enumerations of the rationals (that is, each rational is included exactly once in each sequence).
+
+\subsection{Progress}
+
+The answer, given by John River in the comments, is essentially ``yes, but it's complicated". However, his proof was only a sketch, so take it with a grain of salt.
+
+\subsection{Related problems}
+
+None.
+
+\pagebreak
+
+\section{Surrounding squares with a string}
+
+Author: Ben Crossley --- ID: \verb`3164125767165342` --- Date: 4/24/2021
+
+\subsection{Problem statement}
+
+How many of the squares in an infinite grid of unit squares can we fully surround by a piecewise linear path of length $L$?
+
+\BlankLine
+\BlankLine
+
+\includegraphics[scale=0.1]{Media/surrounding_squares_with_string_1.jpeg}
+
+A path of length $4+4\sqrt2$ can cover 12 squares fully.
+
+\subsection{Comments and clarifications}
+
+None.
+
+\subsection{Progress}
+
+It was noted that this is similar to the Gauss circle problem, and that the right answer is probably circle-ish, but it is unknown. We can at least bound the answer between two circles of constant radius difference using the isoperimetric inequality.
+
+\subsection{Related problems}
+
+In general, one can consider polytopes of a given surface measure. We can also consider other metrics on $\mathbb{R}^2$.
+
+\pagebreak
+
+\section{A variation of Naughts and Crosses (Tic Tac Toe)}
+
+Author: Ben Crossley --- ID: \verb`3131704127074173` --- Date: 3/16/2021
+
+\subsection{Problem statement}
+
+Two players in a game of tic tac toe (also known as naughts and crosses) are each given six pieces of different sizes. On a player's turn, they can place a piece in any empty square, or place one of their larger pieces on top of an opponent's piece. Someone wins if they keep three pieces in a row for a full round of play. What is the optimal strategy?
+
+\includegraphics[scale=0.3]{Media/tic_tac_toe_variation_1.jpeg}
+
+\subsection{Clarifications and comments}
+
+\begin{enumerate}
+  \item Players may only place pieces on a square that is empty or has an enemy piece on top. Players may not ``cover up their own piece".
+  \item If a player can no longer place any pieces (either by running out or having pieces that are too small to place anywhere), then they must pass. A player can only pass in this situation. Two passes in a row result in a tie (unless one player has a three in a row).
+  \item I don't know if this is possible, but if two three in a rows occur, then the first one to have appeared wins.
+\end{enumerate}
+
+\subsection{Progress}
+
+A variation of the game later posted by Max Suica was solved via a computer brute force minimax algorithm, but I can't find Max's post again and forget the result.
+
+\subsection{Related problems}
+
+We can in general consider any set of pieces $S$ relation $R\subset S\times S$ where $R(x,y)$ if piece $x$ can be placed on $y$.
+
+\pagebreak
+
+\section{A down-to-earth abstract homotopy theory problem}
+
+Author: Kaya Ferendo --- ID: 3026415724269681 --- Date: 8/23/2020
+
+\subsection{Problem statement}
+
+Define the polynomials $p_{n,m}(k)$ via $p_{n,0}(k)=1$ and when $m>0$,
+
+$$p_{n,m}(k)=(k-n+m)p_{n,m-1}(k)-p_{n-1,m-1}(k)$$
+
+For a fixed value $N\geq 0$, what is the smallest value of $k$ so that $p_{N,N}(k)\geq 0$ and for all $0\leq m\leq n\leq N$ we have that $p_{m,n}(k)>0$?
+
+\subsection{Clarifications and comments}
+
+This problem was inspired by Kaya's research into abstract homotopy theory.
+
+For each $n,m$, $p_{n,m}(k)$ is a polynomial in $k$. Here are some particular values for various $n,m$.
+
+$$p_{n,1}(k)=(k-n+1)-1=k-n$$
+
+$$p_{n,2}(k)=(k-n+1)(k-n)-(k-(n-1))$$
+
+$$=k^2-2nk+n^2-1$$
+
+\subsection{Progress}
+
+The problem was later solved by Kaya using categorical and topological methods (I'm too dumb to explain how even though they explained the method to me).
+
+\subsection{Related problems}
+
+None.
+
+\pagebreak
+
+\section{Can a set of rays partition $\mathbb{R}^2$?}
+
+Author: Andrew Kepert --- ID: \verb`2932660066978581` --- Date: 8/12/2020
+
+\subsection{Problem statement}
+
+See title.
+
+\subsection{Clarifications and comments}
+
+Rays include their endpoints.
+
+\subsection{Progress}
+
+The answer is known to be ``probably not".
+
+\subsection{Related problems}
+
+We can also ask about rays partitioning other sets. Are there any natural ways rays can partition sets like $\mathbb{R}^3$?
+
+\pagebreak
+
+\section{Maximum upper density of missing sets}
+
+Author: Griffin Macris --- ID: \verb`2892565580988030` (and several other posts) --- Date: 7/2/2020
+
+\subsection{Problem statement}
+
+The following terminology is mine, not Griffin's.
+
+\begin{definition}[Missing set]
+  Let $M$ be a set of natural numbers (don't include zero). Say $S\subset\mathbb{N}$ is an $M$-missing set if the pairwise intersections $m_1S\cap m_2S$ are empty for each $m_1,m_2\in M$.
+\end{definition}
+
+What is the maximum upper density of $S\cup 2S\cup 3S$ if $S$ is a $\{1,2,3\}$-missing set?
+
+\subsection{Clarifications and comments}
+
+Given a set of naturals $S$ and a natural number $n$, the set $nS$ is simply the set of all $ns$ for $s\in S$.
+
+The upper density of a set $S\subset\mathbb{N}$ is defined to be the value of $\limsup_n card(S_n)/n$ where $S_n=S\cap\{1,\ldots,n\}$ and $card(X)$ is the cardinality of the set $X$.
+
+\subsection{Progress}
+
+If the upper density exists, it is known to have value at most 11/12.
+
+\subsection{Related problems}
+
+Of course, we can consider $M$-missing sets for $M$ other than $\{1,2,3\}$.
+
+\pagebreak
+
+\section{Does a sum of sine values converge?}
+
+Author: Alex Meiburg --- ID: \verb`2459482657629660` --- 4/23/2019
+
+\subsection{Problem statement}
+
+Let $\Theta(n)=1$ if $n>0$ and $\Theta(n)=0$ otherwise. Is it true that the following series diverges:
+
+$$\sum_{n=0}^\infty\sin(2^{2^n})$$
+
+\subsection{Clarifications and comments}
+
+The question is essentially whether the sine function is positive infinitely often on the set $\{2^{2^0},2^{2^1},\ldots\}$. This may seem intuitively clear, but actually proving it seems to be incredibly difficult.
+
+\subsection{Progress}
+
+Not much.
+
+\subsection{Related problems}
+
+We can change the function $2^{2^n}$ to other functions. For $n$ it is trivial, and for $2^n$ it actually has a relatively simple solution.
+
+\pagebreak
+
+\section{Chains in $\mathbb{R}^\mathbb{R}$}
+
+Author: Ben Emmerson --- ID: \verb`2428978860680040` --- 3/15/2019
+
+\subsection{Problem statement}
+
+Give $\mathbb{R}^\mathbb{R}$ a partial ordering by letting $f<g$ if there exists $a\in\mathbb{R}$ such that $f(x)<g(x)$ for all $x>a$. What is the largest cardinality of a totally ordered set in $\mathbb{R}^\mathbb{R}$?
+
+\subsection{Clarifications and comments}
+
+None.
+
+\subsection{Progress}
+
+Given any chain in $\mathbb{R}^\mathbb{R}$, we can build an injection to $\mathbb{R}^\mathbb{N}$ by sending $f$ to the infinite tuple $(f(1),f(2),f(3),\ldots)$. To see that this is an injection, consider two different functions $f,g$ in the chain so that $f<g$. Let $a$ be such that $f(x)<g(x)$ for all $x>a$. In particular, $f(n)<g(n)$ where $n$ is the first positive integer greater than $a$, so the sequences $(f(1),f(2),\ldots)$ and $(g(1),g(2),\ldots)$ are distinct.
+
+Since $\textrm{card}(\mathbb{R}^\mathbb{N})=\textrm{card}(\mathbb{R})$ where $\textrm{card}(S)$ is the cardinality of the set $S$, $\textrm{card}(\mathbb{R})$ is an upper bound on the size of the largest chain.
+
+ Note that the constant functions also form a chain of cardinality $\textrm{card}(\mathbb{R})$, so the answer is indeed $\textrm{card}(\mathbb{R})$.
+
+\subsection{Related problems}
+
+We can also consider different orderings, like $f\geq g$ if there is an $a\in\mathbb{R}$ such that for all $x>a$, $f(x)\geq g(x)$. Note that this actually induces a different order. In fact, it is not even a partial order, but rather a partial quasi-order (that is, anti-symmetry fails). There are other variations we could consider two.
+
+Another approach is to study maximal chains in $\mathbb{R}^\mathbb{R}$ more closely, asking which order types are possible. It is suspected (but not correctly proven to my knownledge), that these \textit{maximal} chains cannot be order isomorphic to $\mathbb{R}$.
+
+\pagebreak
+
+\section{Tearing the plane apart}
+
+Author: Max Suica --- ID: \verb`2434400336804559` --- Date: 3/22/2019
+
+\subsection{Problem statement}
+
+Uniformly randomly choose a line through the origin (by randomly choosing an angle in $[0,2\pi)$), then separate the plane by some distance $\delta$ in each direction. Imagine an earthquake with this as a rift. For example, a horizontal line would send points with positive $y$ value to $(x,y+\delta)$ and points with negative $y$ value to $(x,y-\delta)$.
+
+After repeating this process $n$ times, how far away will the closest point of the original plane be on average?
+
+\BlankLine
+
+\includegraphics[scale=0.5]{Media/tearing_plane_apart_1.png}
+
+Note: This was not the original question, but I felt this was more in the spirit of the post since it was originally asking where the area of the plane goes as you repeat this process.
+
+\subsection{Clarifications and comments}
+
+I may care enough to write a formal version of this problem one day, I may not.
+
+\subsection{Progress}
+
+Clearly, after one step, the nearest point is always $\delta$ away. Also, it's easy to see that the minimum for two steps is $\sqrt2\delta$ (via perpendicular rips) and the maximum is $2\delta$, but I'm too lazy to compute the expected value.
+
+\subsection{Related problems}
+
+In the picture, there are different values of $\delta$. In later iterations, we see smaller values of $\delta$ being used. We can ask if there is a sequence of $\delta_i$ so that there is a positive chance that a point does not escape to infinity via this process, and yet the sum $\sum_i\delta_i$ diverges to infinity.
+
+\pagebreak
+
+\section{Continuous permutations}
+
+Author: Max Weinreich --- ID: \verb`2418756601702266` --- Date: 2/28/2019
+
+\subsection{Problem statement}
+
+Let $X$ be a set with 6 elements. Consider the permutation $\sigma=(1\ 2\ 3\ 4)(5\ 6)$. Which topologies on $X$ make $\sigma:X\to X$ continuous?
+
+Warmup: Same question, but $\sigma=(1\ 2\ 3\ 4\ 5\ 6)$
+
+\subsection{Clarifications and comments}
+
+None.
+
+\subsection{Progress}
+
+The answer to the warmup problem is 4. In general, if we consider a set of size $n$ and an $n$-cycle, then the number of topologies making the $n$-cycle continuous is $d(n)+1$ where $d(n)$ is the number of divisors of $n$.
+
+The answer to the main question is probably 17, but is unconfirmed.
+
+\subsection{Related problems}
+
+We can, of course, ask about other permutations, or even families of permutations, or even other functions on finite sets. The sky's the limit.
+
+\pagebreak
+
+\section{Legalize mass necromancy}
+
+Author: Patrick Yee --- ID: \verb`2414120072165919` --- Date: 2/22/2019
+
+\subsection{Problem statement}
+
+Let $p_1,p_2,p_3,s$ be three points in the first quadrant of $\mathbb{R}^2$, and $t$ be a point in the third quadrant. You are allowed to move $s$ to a new points $s'$ so long as $s'$ is closer to two of $p_1,p_2,p_3$ than $s$ was. Show that we can replace $s$ with $t$ after some finite number of moves.
+
+\includegraphics[scale=0.5]{Media/legalize_mass_necromancy_1.jpeg}
+
+The blue dot is $s$, and $p_1,p_2,p_3$ are $A,B,C$ respectively. $t$ is the red point. The green point shows a possible ``move". In this interpretation, judges $A,B,C$ are trying to pass a law as close to their current position in $\mathbb{R}^2$ as possible. The initial law is unicorn rights, and you are trying to pass a series of amendments to have mass necromancy (the red point) passed instead.
+
+Credit to Patrick Yee for the picture.
+
+\subsection{Comments and clarifications}
+
+This can be thought of a slippery slope demonstration, where the $p_i$'s are ``judges", and the movements are amendments to a given bill. Given their position, the fact that we can essentially make successive amendments to change the bill to our whim demonstrates the ``slippery slope" nature of bill amendments.
+
+\subsection{Progress}
+
+The OP said this was possible, but no solution has been given. Perhaps the solution was too long to fit in the margins.
+
+\subsection{Related problems}
+
+We can consider $n+1$ judges in general position in $\mathbb{R}^n$, or even more judges in $\mathbb{R}^2$ with a majority (or perhaps more or less than a majority) needing to be reached.
+
+\pagebreak
+
+\section{Spinning plates}
+
+Author: Samuel Gagnon (posted by Victor Pattee-Gravel) --- ID: \verb`2398079857103274` --- Date: 2/2/2019
+
+\subsection{Problem statement}
+
+We have $n$ plates on sticks with periods $p_1,\ldots,p_n$. Every second, we get to spin a plate. If plate $i$ goes more than $p_i$ seconds without being spinned, then it falls. Is it possible to...
+
+\begin{enumerate}
+  \item Tell when we are able to spin the plates indefinitely?
+  \item Find a pattern that spins the plates for the longest amount of time before the first fall if we can't spin them indefinitely?
+\end{enumerate}
+
+\subsection{Clarifications and comments}
+
+\begin{enumerate}
+  \item We can spin plates before their period is up. That is, if a plate has 5 seconds until falling, we can still spin it to reset the amount of time it has before falling. Note that it is always advantageous to spin a plate.
+\end{enumerate}
+
+\subsection{Progress}
+
+We can, of course, spin plates indefinitely if the the smallest period of the plates is more than $n$ (then we can just spin the plates in order, returning to the first plate and repeating). Also, if the sum of the reciprocals of the periods is more than one, then we can't spin the plates indefinitely. Note that the converse is not true by considering $(p_1,p_2,p_3)=(2,3,8)$. This is because at each second either the second plate is about to fall, or the third plate is about to fall, or both are about to fall in two seconds (thus requiring you to spin both). This leaves no time to spin the third plate.
+
+We can also consider the greedy algorithm that spins the plate that is about to fall the soonest. Regardless of how you decide ties, there is a counterexample to this process working: Choose $(2,4,4)$. We need to spin one of plates 2 or 3 first, but the greedy algorithm would have us spin plate 1 first. Indeed, while the greedy algorithm would have us spin plates in the order $(1,1,2,1)$, after which plate 3 crashes, we can actually solve the problem with the pattern $(2,1,3,1,2,1,3,1,\ldots)$.
+
+It is conjectured (by Alex Meiburg) that if we are allowed to choose the starting amounts of seconds left for the plates (while keeping them at most their period), then the greedy algorithm may work.
+
+\subsection{Related problems}
+
+We can also ask the question about the minimum number $x_n$ (or infimum of numbers, if there is no minimum) such that there is a configuration $(p_1,\ldots,p_n)$ with $1/p_1+\cdots+1/p_n=x$ that is impossible to spin indefinitely.
+
+We can also consider infinite sequences. For lolz, we could consider generalizing even to infinite periods with ordinals, which might allow uncountably many plates.
+
+\pagebreak
+
+\section{Convex hulls with a large set of vantage points}
+
+Author: Max Suica --- ID: \verb`2379181038993156` --- Date: 1/9/2019
+
+\subsection{Problem statement}
+
+A star concave set always has at least one point inside from which there is a line of sight to any other boundary point. Let $C(J)$ be the set of such points.
+
+\begin{lemma}
+  The following are true.
+  
+  \begin{enumerate}
+    \item $C(J)$ is convex and closed.
+    \item If $K$ is convex, then $C(K)=K$.
+    \item If $K$ is smooth and star concave, then $C(K)$ is smooth and contains an open ball.
+  \end{enumerate}
+\end{lemma}
+
+\includegraphics[scale=0.2]{Media/convexhullvantagepoints1.jpeg}
+
+Is it possible for us to find a set $F$ whose boundary has fractal dimension strictly more than one and such that $C(F)$ contains a nonempty ball.
+
+\subsection{Clarifications and comments}
+
+I have tried looking up the definition of star concave but can't find it. It's not necessary to solve the problem, though.
+
+\subsection{Progress}
+
+There are claims in the comments that such a set must fail to have a lipschitz boundary and that such a set must have a lipschitz boundary. I haven't had time to vet either, but if these claims are both true, it would imply that such a shape doesn't exist (there are also suggestions about how to make such a shape, so who really knows).
+
+\subsection{Related problems}
+
+None.
+
+\pagebreak
+
+\section{Santa's levers}
+
+Author: Stefanos van Dijk --- ID: \verb`2349703441940916` --- Date: 12/3/2018
+
+\subsection{Problem statement}
+
+Santa decides the kids of the world have been too naughty. He kidnaps $n$ of the naughtiest kids, and imprisons them in his house at the North Pole in separate rooms.
+
+There is yet another room with four levers that can be switched up or down (so four possible states of the levers). They both start in the up state. Santa tells the kids that he will introduce them to the room one by one, where each time the kid must change the state of one of the levers (so make one of two choices). Santa can choose any order to bring the kids in as long as there is no bound to the number of times a given kid is brought in. That is, Santa chooses a sequence of the numbers from 1 to $n$ and where each number occurs infinitely many times, and brings in the kids according to the given sequence. That is, if $n=4$, he might choose to bring in kid 1 three times, kid 3 twice, kid 4, then kid 1 fifty times, then kid 3, then kid 2 four million times, etc. This would correspond to the sequence $(1,1,1,3,3,4,1,1,1,\ldots,1,3,2,2,2,\ldots,2,\ldots)$. As long as each number is repeated infinitely many times, Santa is allowed to choose that sequence of kids to bring in. If one kid tells Santa correctly when all the kids have been introduced the room (the kids don't know the sequence!), Santa will let them go and give gifts to all the naughty kids of the world.
+
+The kids are then gathered together to devise a strategy, but Santa is listening in. Is it possible for them to escape?
+
+\subsection{Clarifications and comments}
+
+\begin{enumerate}
+  \item The kids can only change the state of one lever at a time.
+  \item Only one kid must realize that all the kids have been called, and they don't have to realize immediately.
+  \item The kids know the value of $n$ (that is, the number of kids that Santa has kidnapped).
+  \item The kids do not know how many others have been called.
+\end{enumerate}
+
+\subsection{Progress}
+
+The kids can escape. They choose a delegate. A non-delegate kid has the following job: If they find the left lever up for the first time, they turn the left lever down. Otherwise, they change the state of the right lever. The delegate kid has the following job: If they find the left lever down, they turn it up. Otherwise, they switch the right lever. If the delegate kid has switched the left lever $n-1$ times, they tell Santa that all the kids have visited the room.
+
+\subsection{Related problems}
+
+We can also wonder the case where each kid must choose the same strategy. That is, there can be no ``delegates".
+
+\pagebreak
+
+\section{The particle gun problem}
+
+Author: Justin Rising --- ID: \verb`2347683455476248` --- Date: 11/30/2018
+
+\subsection{Problem statement}
+
+At times $t=1,2,3,\ldots$ a particle is leaves from the origin traveling right at a velocity uniformly (and independently) randomly chosen from $[0,1]$. If two particles collide, they disappear (this happens when a faster particle ``catches up" to a slower one). What is the probability that a particle escapes to infinity?
+
+\subsection{Clarifications and comments}
+
+Solving for the finite case and taking the limit won't work. As an example, the probability is 1 when $n$ is odd, simply because only two particles collide at a time. Thus, parity is of great concern, which clearly shouldn't matter for the infinite case. Maybe there is a way to reduce to the finite case with more finesse, but all past attempts have failed.
+
+\subsection{Progress}
+
+See the following paper.
+
+\begin{verbatim}
+  https://arxiv.org/pdf/1709.00789.pdf
+\end{verbatim}
+
+\subsection{Related problems}
+
+None.
+
+\pagebreak
+
+\section{Linear progressions without the digit 7}
+
+Author: Victor Wang --- ID: \verb`2346197958958131` --- Date: 11/28/2018
+
+\subsection{Problem statement}
+
+Consider a real number $r$ and the sequence of multiples of $r$ (i.e.- $(r,2r,3r,\ldots)$). Show that this sequence eventually contains a number that has the digit $7$ in its decimal representation.
+
+Is there a natural number $n$ so that for every $r$ the set $\{r,2r,\ldots,nr\}$ must contain a number with the digit 7? If so, what is the smallest such $n$?
+
+\subsection{Clarifications and comments}
+
+Some numbers have two decimal representations. In this case, choose the larger one (or choose in another consistent way to your liking; it shouldn't matter too much).
+
+\subsection{Progress}
+
+It is known that the smallest such $n$ does exist and in fact equals 42 by some casework.
+
+\subsection{Related problems}
+
+We can of course wonder about other bases and other digits besides 7. I wonder whether there is some sort of general formula or algorithm for solving the second question about the minimum $n$.
+
+\pagebreak
+
+\section{The maximum atonality problem}
+
+Author: Beranger Seguin --- ID: \verb`2340208076223786` --- Date: 11/21/2018
+
+\subsection{Problem statement}
+
+Consider the circle graph $C_n$ with vertices $\{v_1,\ldots,v_n\}$ and edges $(i,j)$ whenever $j\cong i+1\mod n$ or $i\cong j+1\mod n$. Let the distance $d_{i,j}$ between vertices $v_i$ and $v_j$ be given by the minimum number of edge traversals to reach $v_j$ from $v_i$.
+
+Now, consider an $n$-cycle $\sigma$ of $S_n$. Call the atonality of $\sigma$, which we denote by $\alpha(\sigma)$, the value of $d_{\sigma(1),\sigma(2)}+\cdots+d_{\sigma_(n-1),\sigma(n)}+d_{\sigma(n),\sigma(1)}$. That is, the atonality of a cycle is the minimum amount of distance traveled by visiting all the vertices in the cycle and returning to the start.
+
+What is the maximum atonality a cycle can have?
+
+\subsection{Clarifications and comments}
+
+An $n$-cycle in $S_n$ is a permutation with exactly one orbit. For example, $(1\ 2\ 3\  \cdots\ n)$ is the standard example of an $n$-cycle in $S_n$.
+
+This problem was inspired by the specific case of $n=12$, where the $n$-cycle $\sigma$ can be thought of as a twelve-tone series on the circle of fifths (I'm not a music major, so don't expect me to tell you why this is).
+
+\subsection{Progress}
+
+Hoo boy there's a lot to say here, and yet the problem remains unsolved.
+
+For the case where $n$ is odd, the problem is straightforward, so we will be focusing on when $n$ is even.
+
+The conjecture is that the greedy algorithm is optimal. A possible path to proving this is by studying the impact of ``changing directions" in the cycle, where a change of direction roughly means changing from going clockwise to going counterclockwise (though this is hard to define formally). I may take some more time to describe the exact plan of attack later, but it's hard to write down so I'll table it for now.
+
+\subsection{Related problems}
+
+A recent generalization that struck me is to consider other classes of permutations. That is, pick a ``shape" of a permutation by specifying the orbits into which $\{1,\ldots,n\}$ is partitioned and consider all permutations with these orbits. Then, we can consider the problem for this class of permutations.
+
+As an example, if $n=2k$ and $\{1,\ldots,n\}$ is partitioned into the sets $\{1,n/2+1\},\{2,n/2+2\},\ldots,\{n/2,n\}$, then the permutation that achieves the maximum atonality is $(1\ n/2+1)(2\ n/2+2)\cdots (n/2\ n)$ (the composition of these $n/2$ transpositions), which can be represented by $n/2$ lines connecting opposite pairs of points.
+
+\pagebreak
+
+\section{The vampire problem}
+
+Author: Thomas Glezen --- ID: \verb`2339144076330186` --- Date: 11/19/2018
+
+\subsection{Problem statement}
+
+Suppose there is a village, and that on a nearby mountain there lives a bloodthirsty vampire. Each night, the vampire goes down to the village and eats someone. The only way to kills the vampire is to poison a certain number of people each night and hope that the vampire eats one of the poisoned people. Regardless of whether they were eaten, every poisoned person dies the next day.
+
+What strategy (number of people poisoned given the number of people in the village) maximizes the expected number of people who survive?
+
+\subsection{Clarifications and comments}
+
+None.
+
+\subsection{Progress}
+
+Via dynamic programming, it was found that the answer is $\sqrt{n}$ for $n$ people in the village, with a few weird exceptions.
+
+\subsection{Related problems}
+
+None that I have taken the time to write down, but there are some ideas in the comments for a continuous analogue.
+
+\pagebreak
+
+\section{Round-robin tournaments with rest breaks}
+
+Author: Stefanos van Dijk --- ID: \verb`2336419383269322` --- Date: 11/16/2018
+
+\subsection{Problem statement}
+
+Suppose $n$ people play a round-robin tournament of chess (or any other two-player game for that matter). Is it possible to arrange the games so that no one plays in two consecutive games?
+
+\subsection{Clarifications and comments}
+
+In a round-robin tournament, each person plays each other person exactly once. Thus, this can be thought of as listing all subsets of size two of $\{1,\ldots,n\}$ in a way so that no number appears in two consecutive subsets.
+
+\subsection{Progress}
+
+It is known to be possible for $n=2$ trivially, but not for $n\in\{3,4\}$. However, it is possible for $n=5$ and $n\geq 10$. I have also shown that the minimum number of participants needed for each to get a rest break of size $k$, as mentioned in the related problems, (other than the case of two participants) is between $2k+3$ and $2k+4$ inclusive.
+
+\subsection{Related problems}
+
+We can also consider the case where we wish to give participants a ``break" of length $k$. The above problem is when $k=1$.
+
+Additionally, we can consider if we have multiple contestants/matches "playing" at once, or when matches involve more than 2 players (and thus we must list all subsets of size $m>2$.
+
+\pagebreak
+
+\section{Multiples with digits only 0's and 1's}
+
+Author: Rose Horner --- ID: \verb`2317179215193339` --- Date: 10/19/2018
+
+\subsection{Problem statement}
+
+\begin{enumerate}
+    \item (Easy) Any integer in base 10 ending in 1 has a multiple containing only 1's.
+    \item (Hard) Any integer has a multiple containing only zeroes and ones.
+    \item (Harder) Find the smallest such multiple in terms of the given integer $n$.
+\end{enumerate}
+
+\subsection{Clarifications and comments}
+
+None.
+
+\subsection{Progress}
+
+The hard problem can be solved in a way that implies the easy problem (I think there's a more direct method, but this is the best I know of as of writing this). Credit to Kevin An for the proof and to Michael Yu for observing its extension to the easy version.
+
+Given a number $n$ imply consider the set $\{1,\ldots,1\cdots 1\}$ where the last number is just $1$ written $n+1$ times. By pigeonhole principle, there are two numbers with the same residue mod $n$, so simply take there difference, which will be a sequence of 1's then a sequence of 0's.
+
+To extend to the easy variant, simply note that ending in 1 implies that the number can't be divisible by 2 or 5, and thus we can appeal to the fundamental theorem of arithmetic to remove all factors of $10=2\times 5$ from our sequence of 1's and 0's found in the last paragraph while still having it be divisible by $n$ (thus removing all the zeroes and keeping only ones).
+
+For the harder answer, a formula involving the multiplicative order can be found, but a more explicit one has not been found (and probably won't considering the use of the multiplicative order function).
+
+\subsection{Related problems}
+
+We can also consider restrictions to other sets of digits.
+
+\pagebreak
+
+\section{Complex numbers with associative exponentiation}
+
+Author: Ben Emmerson --- ID: \verb`2312633185647942` --- Date: 10/12/2018
+
+\subsection{Problem statement}
+
+What are all solutions in the complex plane to the equation $z^{(z^{(z^z)})}=((z^z)^z)^z$?
+
+\subsection{Clarifications and comments}
+
+It is unclear to me how the author intends us to proceed in the case where $z^z$ has multiple values. My best guess is to allow $z$ to be in the solution set if there is some branch cut of $\mathbb{C}^2$ that allows the two sides of the equation to have a value and be equal for this given $z$.
+
+\subsection{Progress}
+
+It is thought that there are three values (excluding zero). These are $-1, 1$, and a weird value between 1.5 and 2. Ben Emmerson has found this third value to be $\exp(W(\log 3))\approx 1.8255$ where $W$ is Lambert's W function.
+
+\subsection{Related problems}
+
+We can in general consider other equations that ``test" the power associativity of complex numbers.
+
+\pagebreak
+
+\section{Digit natural density operator}
+
+Author: Max Weinrich --- ID: \verb`2306329172945010` --- Date: 10/3/2018
+
+\subsection{Problem statement}
+
+For any number $x\in[0,1]$ let $z(x)$ be the natural density of the number of $0's$ in the decimal expansion of $x$ (if it exists).
+
+\begin{enumerate}
+\item What is the measure of the level set $z^{-1}(p)$ for various values of $p\in[0,1]$?
+\item Can you name a point $x$ such that the sequence $x,z(x),z(z(x)),\ldots$ exists and never repeats a value?
+\end{enumerate}
+
+\subsection{Clarifications and comments}
+
+The natural density of a set $S\subset\mathbb{N}$ is the value of the limit $\lim_{n\to\infty}\frac{\lvert S\cap[1,n]\rvert}{n}$ (i.e.- we take the limit of the fraction of numbers $\leq n$ that are in $S$ as $n$ tends to infinity). In the above problem $S$ is the subset of numbers $i\in\mathbb{N}$ such that the $i$th digit of $x$ is a zero.
+
+Note that some numbers have multiple decimal expansions, so we can just choose the largest one (or smallest if that's to your fancy).
+
+\subsection{Progress}
+
+The first question is fairly easy: almost all numbers are normal, which implies that almost all numbers have a 1/10 fraction of their digits as 0's. Thus, the answer is 1 for $p=1/10$ and 0 otherwise.
+
+The second question is open.
+
+\subsection{Related problems}
+
+We can also study other questions/properties of this function, or study the properties of the function with respect to other bases.
+
+\pagebreak
+
+\section{Maximizing spanning trees in the lattice graph}
+
+Author: Sloan Nietert --- ID: \verb`2304889883088939` --- Date: 10/1/2018
+
+\subsection{Problem statement}
+
+Given some number of vertices $n$, which connected subgraphs of the 2D lattice grid with $n$ vertices have the most spanning trees?
+
+\subsection{Clarifications and comments}
+
+A spanning tree is a connected subgraph of a graph containing each vertex of the original graph and no cycles.
+
+The 2D lattice grid is simply the infinite graph with vertices $(a,b)$ with $a,b\in\mathbb{Z}$ and edges between each $(a,b)$ and $(a+1,b),(a-1,b),(a,b+1),(a,b-1)$. There are no ``diagonal" edges.
+
+\subsection{Progress}
+
+It is conjectured that a square is optimal.
+
+\subsection{Related problems}
+
+We can, of course, generalize to multidimensional lattice graphs or other infinite graphs.
+
+\pagebreak
+
+\section{The prisoner problem to end all prisoner problems}
+
+Author: Isaac Garfinkle --- ID: \verb`2301219760122618` --- Date: 9/25/18
+
+\subsection{Problem statement}
+
+Alice is in a prison with $N\geq0$ other prisoners. Alice does not know $N$ and wishes to determine its value.
+
+Each day, every prisoner (including Alice) is presented a white card and a black card. They select one of these individually, after which the warden will choose a $N+1$-cycle on the prisoners and redistribute these cards according to said cycle. This gives each prisoner one bit of information each day. The warden may choose a different cycle each day, and may base their choice on which cards the prisoners select.
+
+Before the game, Alice may write down instructions to be copied and distributed to the other prisoners, which the warden may see. The instructions will must be the same for each other prisoner so that the other prisoners act with the same strategy (though Alice doesn't have to follow the strategy she communicates).
+
+Determine a deterministic strategy (or prove there is no strategy) so that after a finite number of rounds...
+
+\begin{enumerate}
+    \item (Easy) Alice can determine if she is the only prisoner
+    \item (Easy-Medium) Alice can determine an upper bound for the number of prisoners
+    \item (Medium) Alice can determine $N$ exactly
+    \item (Hard) All prisoners (including Alice) can determine $N$ exactly
+\end{enumerate}
+
+\subsection{Clarifications and comments}
+
+None.
+
+\subsection{Progress}
+
+The solution to the hard problem is described in the following reddit post:
+
+\begin{verbatim}
+  https://www.reddit.com/r/mathriddles/comments/grs783/the_prisoners_problem_to_end_all_prisoners/
+\end{verbatim}
+
+\subsection{Related problems}
+
+None (it is the prisoner problem to end all prisoner problems after all).
+
+\pagebreak
+
+\section{Trajectories under a certain map involving binary representations}
+
+Author: Griffin Macris --- ID: \verb`2139500409627888` --- Date: 3/10/2018
+
+\subsection{Problem statement}
+
+Let $g:\mathbb{N}\to\mathbb{N}$ be the function that sends a number $k$ to the number of ones in its binary representation. Let $f:\mathbb{N}\to\mathbb{N}$ be defined by $f(k)=k+g(k)$. Is it true that for any k there are $i,j\geq 0$ so that $f^{(i)}(1)=f^{(j)}(k)$?
+
+\subsection{Clarifications and comments}
+
+$f^{(i)}$ is notation for the $i$'th functional power of $f$. That is, $f^{(i)}(k)=f(f(\cdots f(k)\cdots ))$ where $f$ is being applied $i$ times in the expression.
+
+\subsection{Progress}
+
+\end{document}
