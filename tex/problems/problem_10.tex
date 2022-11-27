@@ -1,0 +1,39 @@
+
+\section{Guaranteeing forward images of periodic sequences are periodic}
+
+Author: G Tony Jacobs --- ID: \verb`3333678430210074` --- Date: 11/24/2021
+
+\subsection{Problem statement}
+
+Let $S$ be the set of infinite sequences over $\{0,1\}$. Let $f:S\to S$ satisfy the following conditions:
+
+\begin{enumerate}
+  \item $f$ is a bijection.
+  \item If $x\in S$ is eventually periodic, so is $f^{-1}(x)$.
+  \item The $x$ and $y$ agree on their first $k$ entries and disagree on their $k+1$-th if and only if $f(x)$ and $f(y)$ agree on their first $k$ entries and disagree on their $k+1$-th.
+\end{enumerate}
+
+\subsection{Comments and clarifications}
+
+The third condition can be equivalently stated that
+
+\BlankLine
+
+$\Big[$ $(x_1,x_2,\ldots,x_k)=(y_1,y_2,\ldots,y_k)$ \textit{and} $x_{k+1}\neq y_{k+1}$ $\Big]$
+
+\BlankLine
+
+if and only if
+
+\BlankLine
+
+$\Big[$ $(f(x)_1,f(x)_2,\ldots,f_(x)_k)=(f(y)_1,f(y)_2,\ldots,f(y)_k)$ \textit{and} $f(x)_{k+1}\neq f(y)_{k+1}$ $\Big]$.
+
+\subsection{Progress}
+
+Several counterexamples have been given in the comments, but I haven't verified them yet.
+
+\subsection{Related problems}
+
+None.
+

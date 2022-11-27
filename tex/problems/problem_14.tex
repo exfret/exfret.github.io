@@ -1,0 +1,27 @@
+
+\section{A variation of Naughts and Crosses (Tic Tac Toe)}
+
+Author: Ben Crossley --- ID: \verb`3131704127074173` --- Date: 3/16/2021
+
+\subsection{Problem statement}
+
+Two players in a game of tic tac toe (also known as naughts and crosses) are each given six pieces of different sizes. On a player's turn, they can place a piece in any empty square, or place one of their larger pieces on top of an opponent's piece. Someone wins if they keep three pieces in a row for a full round of play. What is the optimal strategy?
+
+\includegraphics[scale=0.3]{Media/tic_tac_toe_variation_1.jpeg}
+
+\subsection{Clarifications and comments}
+
+\begin{enumerate}
+  \item Players may only place pieces on a square that is empty or has an enemy piece on top. Players may not ``cover up their own piece".
+  \item If a player can no longer place any pieces (either by running out or having pieces that are too small to place anywhere), then they must pass. A player can only pass in this situation. Two passes in a row result in a tie (unless one player has a three in a row).
+  \item I don't know if this is possible, but if two three in a rows occur, then the first one to have appeared wins.
+\end{enumerate}
+
+\subsection{Progress}
+
+A variation of the game later posted by Max Suica was solved via a computer brute force minimax algorithm, but I can't find Max's post again and forget the result.
+
+\subsection{Related problems}
+
+We can in general consider any set of pieces $S$ relation $R\subset S\times S$ where $R(x,y)$ if piece $x$ can be placed on $y$.
+

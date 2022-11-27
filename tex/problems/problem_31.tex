@@ -1,0 +1,31 @@
+
+\section{Multiples with digits only 0's and 1's}
+
+Author: Rose Horner --- ID: \verb`2317179215193339` --- Date: 10/19/2018
+
+\subsection{Problem statement}
+
+\begin{enumerate}
+    \item (Easy) Any integer in base 10 ending in 1 has a multiple containing only 1's.
+    \item (Hard) Any integer has a multiple containing only zeroes and ones.
+    \item (Harder) Find the smallest such multiple in terms of the given integer $n$.
+\end{enumerate}
+
+\subsection{Clarifications and comments}
+
+None.
+
+\subsection{Progress}
+
+The hard problem can be solved in a way that implies the easy problem (I think there's a more direct method, but this is the best I know of as of writing this). Credit to Kevin An for the proof and to Michael Yu for observing its extension to the easy version.
+
+Given a number $n$ imply consider the set $\{1,\ldots,1\cdots 1\}$ where the last number is just $1$ written $n+1$ times. By pigeonhole principle, there are two numbers with the same residue mod $n$, so simply take there difference, which will be a sequence of 1's then a sequence of 0's.
+
+To extend to the easy variant, simply note that ending in 1 implies that the number can't be divisible by 2 or 5, and thus we can appeal to the fundamental theorem of arithmetic to remove all factors of $10=2\times 5$ from our sequence of 1's and 0's found in the last paragraph while still having it be divisible by $n$ (thus removing all the zeroes and keeping only ones).
+
+For the harder answer, a formula involving the multiplicative order can be found, but a more explicit one has not been found (and probably won't considering the use of the multiplicative order function).
+
+\subsection{Related problems}
+
+We can also consider restrictions to other sets of digits.
+

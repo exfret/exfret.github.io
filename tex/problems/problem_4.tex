@@ -1,0 +1,32 @@
+
+\section{Number of cubes distinguishable from the outside}
+
+Author: Kirill Michael Poznyak --- ID: \verb`3509248082653107` --- Date: 7/18/2022
+
+\subsection{Problem statement}
+
+Consider an $n\times n\times n$ cube divided into $n^3$ unit cubes. Each unit cube cell is either transparent or opaque. Call two configurations equivalent if it is not possible to see the difference between the two by viewing them from any angle outside the cube. How many equivalence classes of configurations are there?
+
+\subsection{Clarifications and comments}
+
+The answer is not $2^{n^3}$ since if all the cells on the outside are opaque, we can't tell whether the remaining cells on the inside are opaque or transparent.
+
+We have to decide whether we can ``see through cracks"; essentially, whether the unit cubes are open or closed. For example, in the following figure for the two dimensional $n=3$ case, it is ambiguous whether we would allow seeing whether the central square (marked by a question mark) is opaque or transparent.
+
+\BlankLine
+\BlankLine
+
+\includegraphics[scale=0.1]{Media/number_of_cubes_distinguishable_1.jpeg}
+
+Make your own choice, although I would personally allow the cracks to not be seen through. So, in the above example, we would not be able to tell the state of the center square.
+
+\subsection{Progress}
+
+Andrew Kepert worked out by hand the following answers for the two dimensions version and $n=1,2,3,4$, $2,16,496,57136$. These have not been verified, so take them with a grain of salt.
+
+One approach suggested by myself is to consider the sets of cubes that can be produced by a ``line of sight" and considering the possible interactions between these sets of cubes.
+
+\subsection{Related problems}
+
+We can consider the 2D version, actually as a preliminary problem. We can also consider only taking lines of sight perpendicular to the faces of the cube for a slightly different counting problem, or considering the problem where we ``don't have depth perception" and can only tell when a line of sight is interrupted rather than where it is interrupted (whether this is equivalent to the original problem is actually unknown to my knowledge).
+

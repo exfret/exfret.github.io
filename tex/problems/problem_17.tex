@@ -1,0 +1,29 @@
+
+\section{Maximum upper density of missing sets}
+
+Author: Griffin Macris --- ID: \verb`2892565580988030` (and several other posts) --- Date: 7/2/2020
+
+\subsection{Problem statement}
+
+The following terminology is mine, not Griffin's.
+
+\begin{definition}[Missing set]
+  Let $M$ be a set of natural numbers (don't include zero). Say $S\subset\mathbb{N}$ is an $M$-missing set if the pairwise intersections $m_1S\cap m_2S$ are empty for each $m_1,m_2\in M$.
+\end{definition}
+
+What is the maximum upper density of $S\cup 2S\cup 3S$ if $S$ is a $\{1,2,3\}$-missing set?
+
+\subsection{Clarifications and comments}
+
+Given a set of naturals $S$ and a natural number $n$, the set $nS$ is simply the set of all $ns$ for $s\in S$.
+
+The upper density of a set $S\subset\mathbb{N}$ is defined to be the value of $\limsup_n card(S_n)/n$ where $S_n=S\cap\{1,\ldots,n\}$ and $card(X)$ is the cardinality of the set $X$.
+
+\subsection{Progress}
+
+If the upper density exists, it is known to have value at most 11/12.
+
+\subsection{Related problems}
+
+Of course, we can consider $M$-missing sets for $M$ other than $\{1,2,3\}$.
+

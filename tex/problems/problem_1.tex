@@ -1,0 +1,25 @@
+
+\section{Linear Conway's soldiers}
+
+Author: Sam Rosenstrauch --- ID: \verb`3591130021131579` --- Date: 10/26/2022
+
+\subsection{Problem statement}
+
+Initially, the number 2 is on the board. At any point in time, a number $n$ written on the board may be erased and replaced by numbers $n+1$ and $n^2$ as long as those numbers are both not on the board (so all the numbers on the board must be distinct). Is it true that for any $k>0$ we can replace numbers in a way such that they are all greater than or equal to $k$?
+
+\subsection{Clarifications and comments}
+
+It is possible for a number to appear on the board on multiple occasions so long as it was erased before the next time it appears. A number just can't appear on the board twice at the same time.
+
+A greedy strategy of simply replacing the smallest number that can be replaced doesn't automatically work since doing so may result in a new number being blocked ad infinitum. To see this, consider other slight variants of the problem, like replacing $n$ with $n+1$ and $n+3$.
+
+\subsection{Progress}
+
+The greedy strategy of replacing the smallest replaceable number each time seems to work via computer search, but is extremely slow. After 10000 steps, this results in a lowest number of 10, and after 100000 it results in a lowest number of 13.
+
+By using methods similar to those used to solve the Conway soldier problem, I was able to show that the rule $n\to n+1,n^c$ is not solvable when $c<2$, but could go no further with this (which makes the value of $c=2$ look very suspicious).
+
+\subsection{Related problems}
+
+We can also ask for other rules, or in general replacing $n$ with $f_1(n),\ldots,f_l(n)$ for some functions $f_1,\ldots,f_l$.
+

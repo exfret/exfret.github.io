@@ -1,0 +1,45 @@
+
+\section{Escaping a tsunami}
+
+Author: Antoine Toni Poulin --- ID: \verb`3429336220644294` --- Date: 4/4/2022
+
+\subsection{Problem statement}
+
+Consider a bisequence of ones and zeroes. These encode a landscape as follows: a point's height is the minimum distance to the nearest zero. See the below image as a demonstration.
+
+\includegraphics[scale=0.1]{Media/escaping_a_tsunami_1.jpg}
+
+Now, imagine a tsunami is rising and covering up the whole landscape, one height level at a time. Initially, it only covers up the lowest height areas (those that were originally a zero in the original bisequence that defined the landscape). After one hour, it covers up all points of height one, then after an hour all points of height two, and so on. We have a helicopter, luckily, and will jump each hour from any point to the nearest point that is of height one larger (choose the rightmost point if there is a tie in distance).
+
+Is it true that if our friend at the same height as us carries out the same process with her helicopter, she will eventually converge to us?
+
+\includegraphics[scale=0.1]{Media/escaping_a_tsunami_2.jpg}
+
+In this picture above, You start at A1 and your friend at B1 and eventually you both converge on B4/A4 (assume there are sufficiently many zeroes to the left an right for these paths to be correct). The question is: does this happen \textit{almost always}, that is, is it true that with measure one a given bisequence has this ``convergent" property?
+
+\subsection{Clarifications and comments}
+
+A bisequence is a function from $\mathbb{Z}$ to some set $S$ (recall that a ``normal" sequence goes from $\mathbb{N}$ to $S$). In other words, a bisequence is a ``two-sided sequence" which trails off infinitely to the left and to the right.
+
+\subsection{Progress}
+
+A proof is known by Antoine that involves some stochastic something trickery. It is easy to show in an elementary manner that there are at most two ``convergent paths", but showing that there is indeed one takes some work that I haven't put in yet.
+
+Here is a sketch of Antoine's proof:
+
+\begin{quote}
+  If a given landscape makes it impossible for two friends to find each other, varying the position of the two friends give that the landscape has a natural "midpoint" m, where if one friends start to the right or at m and the other on the left of m, they cannot rejoin. 
+
+  Now this midpoint is invariant under translation of the sequence, hence we can choose for the midpoint to be at 0.
+
+  Suppose to the contrary that there is a non null probability that the two friends cannot see each other. Then, there is a non null set on which a set of representatives up to translation can be taken.
+
+  This set of representative can be constructed with more care in a measurable way, but trying to calculate its measure fails in the same way as the usual vitali set contruction, by a countable union of disjoint translates giving a non null, non infinite measure set.
+\end{quote}
+
+\subsection{Related problems}
+
+This was inspired by some research into finding measureable trees in Borel graphs arising from a countable group $\Gamma$ acting on its power set.
+
+We can also consider generalizing the problem in a less abstract way by allowing arbitrary landscapes with piecewise linear functions, or simply allowing arbitrary landscapes with slopes of -1, 0, or 1 at each step.
+

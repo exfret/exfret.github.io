@@ -1,0 +1,21 @@
+
+\section{Fixed chances, unknown numbers of balls}
+
+Author: Elliott Line --- ID: \verb`3454653844779198` --- Date: 5/8/2022
+
+\subsection{Problem statement}
+
+There are $n$ balls in a bag, each of which has one of $k$ colors. You draw three of the balls and find that they all have the same color. What is the minimum value of $n$ so that the chance of this occurrence is one third?
+
+\subsection{Comments and clarifications}
+
+We do not care about minimizing or fixing $k$, though we could consider that as a future direction. Also, the three balls are picked without replacement, so they are not put back in before choosing the next one.
+
+\subsection{Progress}
+
+It is known via computer search that the minimum answer is 82, via the partitioning into colors given by $(57,12,6,6,1)$. A more mathematical proof is not known.
+
+\subsection{Related problems}
+
+We can also limit the number of colors $k$, or ask for probabilities $p$ other than $1/3$. It is known that for $k=3,p=1/3$, the minimum $n$ is 34102 given by the arrangement $(23460, 5797, 4845)$, despite there existing double-digit solutions for $p\in\{1/2,1/4,1/5,1/6,1/7\}$. In general, relatively easy solutions were found for all fractions in $[0,1]$ with denominator less than 10, except for the numbers $1/3,4/9,5/9,7/9$.
+

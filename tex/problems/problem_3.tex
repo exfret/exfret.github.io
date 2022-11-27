@@ -1,0 +1,25 @@
+
+\section{Can't Stop Simplified}
+
+Author: Richard Strong Bowen --- ID: \verb`3540962639481651` --- Date: 8/29/2022
+
+\subsection{Problem Statement}
+
+In the game of Can't Stop Simplified, each of two players has a stack of coins of some size $n$. On their turn, a player may flip a coin. If it is heads, they remove a coin from their stack. If it is tails their turn ends and all coins that were removed that turn go back onto their stack. A player can also choose to stop flipping a coin at any given time, at which point all coins removed that turn will be permanently removed from that player's stack and their turn ends.
+
+What is the optimal strategy for this game?
+
+\subsection{Clarifications and comments}
+
+None.
+
+\subsection{Progress}
+
+A dynamic programming algorithm for solving the problem was created by Alex Meiburg (unfortunately, I don't have access to the source code). This algorithm was also double-checked with some manual caluclations by myself.
+
+It was conjectured by Martin Shoosterman that the optimal play would be to take about $-1/\log p$ coins and stop (where $p$ is the probability of getting heads), but this turned out not to be the case.
+
+\subsection{Related problems}
+
+We can also consider $p$ other than 1/2 or a number of players other than just 2. As this game was inspired by a very popular title on Board Game Arena (a website that hosts online board games), we can also consider making the game more similar to this game and then solving it.
+

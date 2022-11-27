@@ -1,0 +1,30 @@
+
+\section{Digit natural density operator}
+
+Author: Max Weinrich --- ID: \verb`2306329172945010` --- Date: 10/3/2018
+
+\subsection{Problem statement}
+
+For any number $x\in[0,1]$ let $z(x)$ be the natural density of the number of $0's$ in the decimal expansion of $x$ (if it exists).
+
+\begin{enumerate}
+\item What is the measure of the level set $z^{-1}(p)$ for various values of $p\in[0,1]$?
+\item Can you name a point $x$ such that the sequence $x,z(x),z(z(x)),\ldots$ exists and never repeats a value?
+\end{enumerate}
+
+\subsection{Clarifications and comments}
+
+The natural density of a set $S\subset\mathbb{N}$ is the value of the limit $\lim_{n\to\infty}\frac{\lvert S\cap[1,n]\rvert}{n}$ (i.e.- we take the limit of the fraction of numbers $\leq n$ that are in $S$ as $n$ tends to infinity). In the above problem $S$ is the subset of numbers $i\in\mathbb{N}$ such that the $i$th digit of $x$ is a zero.
+
+Note that some numbers have multiple decimal expansions, so we can just choose the largest one (or smallest if that's to your fancy).
+
+\subsection{Progress}
+
+The first question is fairly easy: almost all numbers are normal, which implies that almost all numbers have a 1/10 fraction of their digits as 0's. Thus, the answer is 1 for $p=1/10$ and 0 otherwise.
+
+The second question is open.
+
+\subsection{Related problems}
+
+We can also study other questions/properties of this function, or study the properties of the function with respect to other bases.
+

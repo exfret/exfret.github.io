@@ -1,0 +1,29 @@
+
+\section{Tearing the plane apart}
+
+Author: Max Suica --- ID: \verb`2434400336804559` --- Date: 3/22/2019
+
+\subsection{Problem statement}
+
+Uniformly randomly choose a line through the origin (by randomly choosing an angle in $[0,2\pi)$), then separate the plane by some distance $\delta$ in each direction. Imagine an earthquake with this as a rift. For example, a horizontal line would send points with positive $y$ value to $(x,y+\delta)$ and points with negative $y$ value to $(x,y-\delta)$.
+
+After repeating this process $n$ times, how far away will the closest point of the original plane be on average?
+
+\BlankLine
+
+\includegraphics[scale=0.5]{Media/tearing_plane_apart_1.png}
+
+Note: This was not the original question, but I felt this was more in the spirit of the post since it was originally asking where the area of the plane goes as you repeat this process.
+
+\subsection{Clarifications and comments}
+
+I may care enough to write a formal version of this problem one day, I may not.
+
+\subsection{Progress}
+
+Clearly, after one step, the nearest point is always $\delta$ away. Also, it's easy to see that the minimum for two steps is $\sqrt2\delta$ (via perpendicular rips) and the maximum is $2\delta$, but I'm too lazy to compute the expected value.
+
+\subsection{Related problems}
+
+In the picture, there are different values of $\delta$. In later iterations, we see smaller values of $\delta$ being used. We can ask if there is a sequence of $\delta_i$ so that there is a positive chance that a point does not escape to infinity via this process, and yet the sum $\sum_i\delta_i$ diverges to infinity.
+

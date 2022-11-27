@@ -1,0 +1,23 @@
+
+\section{Accurate IMDB ratings}
+
+Author: Arsh Jhaj --- ID: \verb`3504185873159328` --- Date: 7/11/2022
+
+\subsection{Problem statement}
+
+This problem is motivated by the following ``real-life" example. Suppose that when a person sees an IMDB rating for a movie higher than their own personal rating for it, they rate it $0/10$ in order to bring it closer to their rating. Conversely, when a person sees a lower rating than their personal opinion, they rate the movie 10/10. How accurate will be the resulting IMDB rating to the actual average rating?
+
+Formally speaking, say that we have a distribution on $[0,1]$ with mean $\mu$. Suppose $(X_i)$ is a sequence of i.i.d. random variables with distribution $D$ (representing the distribution of ratings for the movie). Define $f_r:\mathbb{R}\to\mathbb{R}$ such that $f(x)$ is equal to zero for negative $x$, equal to $r$ at $x=0$, and equal to one for positive $x$. Then let $Y_i=f_{X_i}(X_i-\frac{1}{i-1}\sum_{j=1}^{i-1}Y_j)$. Does the sample mean of the $Y_i$'s always tend to $\mu$ almost surely? If not, how far does it stray from $\mu$?
+
+\subsection{Clarifications and comments}
+
+This is actually different from the originally posted problem in two important ways. First of all, the original problem had probability distributions with some finite support $\{1,\ldots,K\}$ for some $K$. I modified this to support in $[0,1]$. Also, the $Y_i$'s were defined with respect to the average of the $X_i$'s rather than the previous $Y_i$'s, which seems to me to contradict the purpose of the problem.
+
+\subsection{Progress}
+
+The original problem is known to be false (that is, the sample mean doesn't always tend to $\mu$), but I'm not sure about my formulation.
+
+\subsection{Related problems}
+
+We can also try to consider non-distribution-based versions of this problem. I don't have a precise formulation of anything in these directions, but I'm sure there are interesting ones to discover.
+

@@ -1,0 +1,30 @@
+
+\section{Santa's levers}
+
+Author: Stefanos van Dijk --- ID: \verb`2349703441940916` --- Date: 12/3/2018
+
+\subsection{Problem statement}
+
+Santa decides the kids of the world have been too naughty. He kidnaps $n$ of the naughtiest kids, and imprisons them in his house at the North Pole in separate rooms.
+
+There is yet another room with four levers that can be switched up or down (so four possible states of the levers). They both start in the up state. Santa tells the kids that he will introduce them to the room one by one, where each time the kid must change the state of one of the levers (so make one of two choices). Santa can choose any order to bring the kids in as long as there is no bound to the number of times a given kid is brought in. That is, Santa chooses a sequence of the numbers from 1 to $n$ and where each number occurs infinitely many times, and brings in the kids according to the given sequence. That is, if $n=4$, he might choose to bring in kid 1 three times, kid 3 twice, kid 4, then kid 1 fifty times, then kid 3, then kid 2 four million times, etc. This would correspond to the sequence $(1,1,1,3,3,4,1,1,1,\ldots,1,3,2,2,2,\ldots,2,\ldots)$. As long as each number is repeated infinitely many times, Santa is allowed to choose that sequence of kids to bring in. If one kid tells Santa correctly when all the kids have been introduced the room (the kids don't know the sequence!), Santa will let them go and give gifts to all the naughty kids of the world.
+
+The kids are then gathered together to devise a strategy, but Santa is listening in. Is it possible for them to escape?
+
+\subsection{Clarifications and comments}
+
+\begin{enumerate}
+  \item The kids can only change the state of one lever at a time.
+  \item Only one kid must realize that all the kids have been called, and they don't have to realize immediately.
+  \item The kids know the value of $n$ (that is, the number of kids that Santa has kidnapped).
+  \item The kids do not know how many others have been called.
+\end{enumerate}
+
+\subsection{Progress}
+
+The kids can escape. They choose a delegate. A non-delegate kid has the following job: If they find the left lever up for the first time, they turn the left lever down. Otherwise, they change the state of the right lever. The delegate kid has the following job: If they find the left lever down, they turn it up. Otherwise, they switch the right lever. If the delegate kid has switched the left lever $n-1$ times, they tell Santa that all the kids have visited the room.
+
+\subsection{Related problems}
+
+We can also wonder the case where each kid must choose the same strategy. That is, there can be no ``delegates".
+

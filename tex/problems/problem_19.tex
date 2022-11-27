@@ -1,0 +1,27 @@
+
+\section{Chains in $\mathbb{R}^\mathbb{R}$}
+
+Author: Ben Emmerson --- ID: \verb`2428978860680040` --- 3/15/2019
+
+\subsection{Problem statement}
+
+Give $\mathbb{R}^\mathbb{R}$ a partial ordering by letting $f<g$ if there exists $a\in\mathbb{R}$ such that $f(x)<g(x)$ for all $x>a$. What is the largest cardinality of a totally ordered set in $\mathbb{R}^\mathbb{R}$?
+
+\subsection{Clarifications and comments}
+
+None.
+
+\subsection{Progress}
+
+Given any chain in $\mathbb{R}^\mathbb{R}$, we can build an injection to $\mathbb{R}^\mathbb{N}$ by sending $f$ to the infinite tuple $(f(1),f(2),f(3),\ldots)$. To see that this is an injection, consider two different functions $f,g$ in the chain so that $f<g$. Let $a$ be such that $f(x)<g(x)$ for all $x>a$. In particular, $f(n)<g(n)$ where $n$ is the first positive integer greater than $a$, so the sequences $(f(1),f(2),\ldots)$ and $(g(1),g(2),\ldots)$ are distinct.
+
+Since $\textrm{card}(\mathbb{R}^\mathbb{N})=\textrm{card}(\mathbb{R})$ where $\textrm{card}(S)$ is the cardinality of the set $S$, $\textrm{card}(\mathbb{R})$ is an upper bound on the size of the largest chain.
+
+ Note that the constant functions also form a chain of cardinality $\textrm{card}(\mathbb{R})$, so the answer is indeed $\textrm{card}(\mathbb{R})$.
+
+\subsection{Related problems}
+
+We can also consider different orderings, like $f\geq g$ if there is an $a\in\mathbb{R}$ such that for all $x>a$, $f(x)\geq g(x)$. Note that this actually induces a different order. In fact, it is not even a partial order, but rather a partial quasi-order (that is, anti-symmetry fails). There are other variations we could consider two.
+
+Another approach is to study maximal chains in $\mathbb{R}^\mathbb{R}$ more closely, asking which order types are possible. It is suspected (but not correctly proven to my knownledge), that these \textit{maximal} chains cannot be order isomorphic to $\mathbb{R}$.
+

@@ -1,0 +1,33 @@
+
+\section{The maximum atonality problem}
+
+Author: Beranger Seguin --- ID: \verb`2340208076223786` --- Date: 11/21/2018
+
+\subsection{Problem statement}
+
+Consider the circle graph $C_n$ with vertices $\{v_1,\ldots,v_n\}$ and edges $(i,j)$ whenever $j\cong i+1\mod n$ or $i\cong j+1\mod n$. Let the distance $d_{i,j}$ between vertices $v_i$ and $v_j$ be given by the minimum number of edge traversals to reach $v_j$ from $v_i$.
+
+Now, consider an $n$-cycle $\sigma$ of $S_n$. Call the atonality of $\sigma$, which we denote by $\alpha(\sigma)$, the value of $d_{\sigma(1),\sigma(2)}+\cdots+d_{\sigma_(n-1),\sigma(n)}+d_{\sigma(n),\sigma(1)}$. That is, the atonality of a cycle is the minimum amount of distance traveled by visiting all the vertices in the cycle and returning to the start.
+
+What is the maximum atonality a cycle can have?
+
+\subsection{Clarifications and comments}
+
+An $n$-cycle in $S_n$ is a permutation with exactly one orbit. For example, $(1\ 2\ 3\  \cdots\ n)$ is the standard example of an $n$-cycle in $S_n$.
+
+This problem was inspired by the specific case of $n=12$, where the $n$-cycle $\sigma$ can be thought of as a twelve-tone series on the circle of fifths (I'm not a music major, so don't expect me to tell you why this is).
+
+\subsection{Progress}
+
+Hoo boy there's a lot to say here, and yet the problem remains unsolved.
+
+For the case where $n$ is odd, the problem is straightforward, so we will be focusing on when $n$ is even.
+
+The conjecture is that the greedy algorithm is optimal. A possible path to proving this is by studying the impact of ``changing directions" in the cycle, where a change of direction roughly means changing from going clockwise to going counterclockwise (though this is hard to define formally). I may take some more time to describe the exact plan of attack later, but it's hard to write down so I'll table it for now.
+
+\subsection{Related problems}
+
+A recent generalization that struck me is to consider other classes of permutations. That is, pick a ``shape" of a permutation by specifying the orbits into which $\{1,\ldots,n\}$ is partitioned and consider all permutations with these orbits. Then, we can consider the problem for this class of permutations.
+
+As an example, if $n=2k$ and $\{1,\ldots,n\}$ is partitioned into the sets $\{1,n/2+1\},\{2,n/2+2\},\ldots,\{n/2,n\}$, then the permutation that achieves the maximum atonality is $(1\ n/2+1)(2\ n/2+2)\cdots (n/2\ n)$ (the composition of these $n/2$ transpositions), which can be represented by $n/2$ lines connecting opposite pairs of points.
+

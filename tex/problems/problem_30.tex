@@ -1,0 +1,23 @@
+
+\section{Round-robin tournaments with rest breaks}
+
+Author: Stefanos van Dijk --- ID: \verb`2336419383269322` --- Date: 11/16/2018
+
+\subsection{Problem statement}
+
+Suppose $n$ people play a round-robin tournament of chess (or any other two-player game for that matter). Is it possible to arrange the games so that no one plays in two consecutive games?
+
+\subsection{Clarifications and comments}
+
+In a round-robin tournament, each person plays each other person exactly once. Thus, this can be thought of as listing all subsets of size two of $\{1,\ldots,n\}$ in a way so that no number appears in two consecutive subsets.
+
+\subsection{Progress}
+
+It is known to be possible for $n=2$ trivially, but not for $n\in\{3,4\}$. However, it is possible for $n=5$ and $n\geq 10$. I have also shown that the minimum number of participants needed for each to get a rest break of size $k$, as mentioned in the related problems, (other than the case of two participants) is between $2k+3$ and $2k+4$ inclusive.
+
+\subsection{Related problems}
+
+We can also consider the case where we wish to give participants a ``break" of length $k$. The above problem is when $k=1$.
+
+Additionally, we can consider if we have multiple contestants/matches "playing" at once, or when matches involve more than 2 players (and thus we must list all subsets of size $m>2$.
+

@@ -1,0 +1,34 @@
+
+\section{Spinning plates}
+
+Author: Samuel Gagnon (posted by Victor Pattee-Gravel) --- ID: \verb`2398079857103274` --- Date: 2/2/2019
+
+\subsection{Problem statement}
+
+We have $n$ plates on sticks with periods $p_1,\ldots,p_n$. Every second, we get to spin a plate. If plate $i$ goes more than $p_i$ seconds without being spinned, then it falls. Is it possible to...
+
+\begin{enumerate}
+  \item Tell when we are able to spin the plates indefinitely?
+  \item Find a pattern that spins the plates for the longest amount of time before the first fall if we can't spin them indefinitely?
+\end{enumerate}
+
+\subsection{Clarifications and comments}
+
+\begin{enumerate}
+  \item We can spin plates before their period is up. That is, if a plate has 5 seconds until falling, we can still spin it to reset the amount of time it has before falling. Note that it is always advantageous to spin a plate.
+\end{enumerate}
+
+\subsection{Progress}
+
+We can, of course, spin plates indefinitely if the the smallest period of the plates is more than $n$ (then we can just spin the plates in order, returning to the first plate and repeating). Also, if the sum of the reciprocals of the periods is more than one, then we can't spin the plates indefinitely. Note that the converse is not true by considering $(p_1,p_2,p_3)=(2,3,8)$. This is because at each second either the second plate is about to fall, or the third plate is about to fall, or both are about to fall in two seconds (thus requiring you to spin both). This leaves no time to spin the third plate.
+
+We can also consider the greedy algorithm that spins the plate that is about to fall the soonest. Regardless of how you decide ties, there is a counterexample to this process working: Choose $(2,4,4)$. We need to spin one of plates 2 or 3 first, but the greedy algorithm would have us spin plate 1 first. Indeed, while the greedy algorithm would have us spin plates in the order $(1,1,2,1)$, after which plate 3 crashes, we can actually solve the problem with the pattern $(2,1,3,1,2,1,3,1,\ldots)$.
+
+It is conjectured (by Alex Meiburg) that if we are allowed to choose the starting amounts of seconds left for the plates (while keeping them at most their period), then the greedy algorithm may work.
+
+\subsection{Related problems}
+
+We can also ask the question about the minimum number $x_n$ (or infimum of numbers, if there is no minimum) such that there is a configuration $(p_1,\ldots,p_n)$ with $1/p_1+\cdots+1/p_n=x$ that is impossible to spin indefinitely.
+
+We can also consider infinite sequences. For lolz, we could consider generalizing even to infinite periods with ordinals, which might allow uncountably many plates.
+

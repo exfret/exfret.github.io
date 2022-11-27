@@ -1,0 +1,41 @@
+
+\section{Breaking sticks}
+
+Author: John River --- ID: \verb`3552524714992110` --- Date: 9/13/2022
+
+\subsection{Problem statement}
+
+On the ground lies a pile of sticks of various lengths. A stick is chosen, with each stick having equal chance of being chosen, and this stick is broken at a random point along its length. The two resulting sticks are returned to the pile.
+
+If we apply this process $n$ times to a pile initially containing only a stick of length one, what is the expected size of the largest stick in the pile afterwards?
+
+\includegraphics[scale=0.15]{Media/breaking_sticks_1.jpg}
+
+\subsection{Clarifications and comments}
+
+Since each stick has an equal chance of being chosen regardless of its length, very small sticks have a disproportionately high chance of being broken into more smaller sticks. This results in abnormally large average lengths for the largest piece.
+
+For example, after 500 ``snaps", the expected length of the largest stick is about 0.2098, which is 100x larger than the average stick length of 0.002.
+
+\subsection{Progress}
+
+In the following link, it is shown that the length is on the order of $n^{2\sqrt2-3}$.
+
+\begin{verbatim}
+  https://mathoverflow.net/questions/430355/expected-length-of-longest-stick
+  -in-a-stick-snapping-process?fbclid=IwAR28qH5gZQK-Ms3mskm4y
+  _FmBxPWrtTPdF0IMY-Iw0IZsxU-EMc0psOutSU
+\end{verbatim}
+
+Some exact answers are $3/4$ for $n=1$, $3/8+\log(4/3)$ for $n=2$, and for $n=3$ it is known to be...
+
+$$\frac{5}{24}+\frac{89}{18}\log(2)-\frac{17}{6}\log(3)+\frac{1}{3}\sum_{n=1}^\infty\frac{1}{4^nn^2}$$
+
+The sum in this answer can't even be written in a closed form without using special functions. The exact answer for the $n=4$ case is open, or, rather, probably deserves to be left alone.
+
+\subsection{Related problems}
+
+There is also the problem where sticks are chosen with higher likelihood in proportion to their length, which reduces to the problem of breaking a line segment along $n$ random points and then considering the largest piece.
+
+We can also weight the chance of choosing a piece of a given length $L$ by some formula in $L$, like $L^c$ for some $c$. The two problems mentioned correspond to $c=0$ and $c=1$.
+
